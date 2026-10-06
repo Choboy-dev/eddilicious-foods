@@ -1,0 +1,303 @@
+/**
+ * Admin meals — mobile layout only (max-width 1023px).
+ */
+
+@media (max-width: 1023px) {
+    /* ---- Page rhythm ---- */
+    .admin-page-meals .admin-topbar__eyebrow {
+        display: none;
+    }
+
+    .admin-page-meals .admin-topbar {
+        padding-top: 10px;
+        padding-bottom: 6px;
+        gap: 8px;
+    }
+
+    .admin-page-meals .admin-topbar__title {
+        font-size: 1.375rem;
+    }
+
+    .admin-page-meals .admin-main {
+        padding: 12px 14px 24px;
+        gap: 12px;
+    }
+
+    .admin-meals {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    /* ---- Info notice ---- */
+    .admin-meals__notice {
+        margin: 0;
+        padding: 12px 14px;
+        font-size: 0.8125rem;
+        line-height: 1.45;
+        border-radius: 12px;
+    }
+
+    /* ---- Panel ---- */
+    .admin-meals__panel {
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .admin-meals__head {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .admin-meals__head .admin-panel__title {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: var(--foreground-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .admin-meals__lead {
+        font-size: 0.8125rem;
+        line-height: 1.45;
+    }
+
+    .admin-meals__add {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+        font-size: 0.9375rem;
+    }
+
+    /* ---- Bulk bar ---- */
+    .admin-meals__bulk {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 12px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .admin-meals__bulk .admin-meals-bulk__actions {
+        width: 100%;
+    }
+
+    .admin-meals__bulk .admin-meals-bulk__actions .admin-btn {
+        flex: 1 1 auto;
+        justify-content: center;
+        min-height: 40px;
+    }
+
+    .admin-meals__list {
+        min-width: 0;
+    }
+
+    .admin-meals__list .admin-empty {
+        padding: 24px 16px;
+        text-align: center;
+        background: var(--background-soft);
+        border: 1px dashed var(--border);
+        border-radius: 12px;
+    }
+
+    /* ---- Select all toolbar ---- */
+    .admin-meals-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 0 2px;
+    }
+
+    .admin-meals-select-all {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--foreground-muted);
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .admin-meals-select-all .admin-table__checkbox {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* ---- Meal cards ---- */
+    .admin-meals-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .admin-meals-card {
+        padding: 12px;
+        background: var(--background);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: var(--shadow-sm);
+        transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .admin-meals-card--selected {
+        border-color: rgba(var(--primary-rgb), 0.35);
+        background: rgba(var(--primary-rgb), 0.04);
+    }
+
+    .admin-meals-toolbar__count {
+        font-size: 0.75rem;
+        color: var(--foreground-muted);
+    }
+
+    .admin-meals-card__head {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .admin-meals-card__check {
+        flex-shrink: 0;
+        padding-top: 26px;
+    }
+
+    .admin-meals-card__check .admin-table__checkbox {
+        width: 18px;
+        height: 18px;
+    }
+
+    .admin-meals-card__identity {
+        display: flex;
+        flex: 1 1 auto;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .admin-meals-card__media {
+        flex-shrink: 0;
+        width: 72px;
+        height: 72px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: var(--background-soft);
+        border: 1px solid var(--border);
+    }
+
+    .admin-meals-card__thumb {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .admin-meals-card__info {
+        min-width: 0;
+        padding-top: 2px;
+    }
+
+    .admin-meals-card__name {
+        margin: 0 0 8px;
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25;
+        color: var(--foreground);
+        word-break: break-word;
+    }
+
+    .admin-meals-card__meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .admin-meals-card__category {
+        display: inline-flex;
+        padding: 3px 8px;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: var(--primary);
+        background: var(--primary-soft);
+        border-radius: 999px;
+    }
+
+    .admin-meals-card__source {
+        font-size: 0.75rem;
+        color: var(--foreground-muted);
+    }
+
+    .admin-meals-card__aside {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .admin-meals-card__price {
+        font-family: var(--font-heading);
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--foreground);
+        text-align: right;
+    }
+
+    .admin-meals-card__actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
+    }
+
+    .admin-meals-card__actions .admin-btn {
+        justify-content: center;
+        min-height: 40px;
+    }
+
+    .admin-meals-card__actions .admin-meals-card__delete {
+        color: var(--error);
+        border-color: rgba(var(--error-rgb), 0.25);
+    }
+
+    .admin-meals-card__actions .admin-meals-card__delete:hover {
+        color: var(--error);
+        background: var(--error-soft);
+        border-color: rgba(var(--error-rgb), 0.35);
+    }
+
+    /* ---- Meal modal tweaks ---- */
+    .admin-page-meals .admin-modal--meal .admin-modal__dialog--meal {
+        max-height: calc(100dvh - 24px);
+        overflow-y: auto;
+    }
+
+    .admin-page-meals .admin-meal-form .admin-form__actions {
+        flex-direction: column;
+    }
+
+    .admin-page-meals .admin-meal-form .admin-form__actions .admin-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 1023px) and (prefers-reduced-motion: reduce) {
+    .admin-meals-card {
+        transition: none;
+    }
+}

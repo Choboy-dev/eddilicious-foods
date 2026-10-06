@@ -1,0 +1,137 @@
+/* ============================================
+   Eddilicious Foods — Site terms notice
+   ============================================ */
+
+.site-terms-notice {
+    position: fixed;
+    inset: 0;
+    z-index: 11900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    pointer-events: none;
+}
+
+.site-terms-notice:not([hidden]) {
+    pointer-events: auto;
+}
+
+.site-terms-notice[hidden] {
+    display: none;
+}
+
+.site-terms-notice__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+}
+
+.site-terms-notice__panel {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 400px);
+    padding: 18px 18px 16px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+}
+
+.site-terms-notice__title {
+    margin: 0 0 8px;
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--foreground);
+}
+
+.site-terms-notice__text {
+    margin: 0 0 10px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--foreground-muted);
+}
+
+.site-terms-notice__links {
+    margin: 0 0 14px;
+    font-size: 0.8125rem;
+    line-height: 1.45;
+}
+
+.site-terms-notice__links a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.site-terms-notice__links a:hover {
+    color: var(--primary-hover);
+}
+
+.site-terms-notice__links-sep {
+    margin: 0 6px;
+    color: var(--foreground-muted);
+}
+
+.site-terms-notice__check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    color: var(--foreground);
+    cursor: pointer;
+}
+
+.site-terms-notice__checkbox {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.site-terms-notice__btn {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 16px;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.site-terms-notice__btn:hover:not(:disabled) {
+    background: var(--primary-hover);
+}
+
+.site-terms-notice__btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.site-terms-notice__btn:focus-visible,
+.site-terms-notice__checkbox:focus-visible {
+    outline: 2px solid rgba(var(--primary-rgb), 0.45);
+    outline-offset: 2px;
+}
+
+body.site-terms-notice-open {
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-terms-notice__btn {
+        transition: none;
+    }
+}

@@ -1,0 +1,228 @@
+/* Eddilicious Foods — brand design tokens */
+:root {
+    /* Surfaces */
+    --background: #ffffff;
+    --background-soft: #f8faf9;
+    --foreground: #0f172a;
+    --foreground-muted: #64748b;
+    --muted: #f1f5f3;
+    --border: rgba(2, 48, 32, 0.1);
+
+    /* Brand primary — forest green (#023020) */
+    --brand-forest: #023020;
+    --primary: #023020;
+    --primary-hover: #034f35;
+    --primary-active: #012418;
+    --primary-foreground: #ffffff;
+    --primary-soft: #e8f2ed;
+    --primary-muted: #b5cfc0;
+    --primary-light: #4a9068;
+    --primary-faint: #f3faf7;
+    --primary-rgb: 2, 48, 32;
+
+    /* Brand accent — fresh sage (replaces gold/orange highlights) */
+    --accent: #6b9e78;
+    --accent-hover: #588a64;
+    --accent-dark: #3d6b4a;
+    --accent-soft: #eef6f0;
+    --accent-rgb: 107, 158, 120;
+
+    /* Secondary highlight — herb green for decorative accents */
+    --highlight: #8fbc5a;
+    --highlight-rgb: 143, 188, 90;
+
+    /* Badges & tags */
+    --badge-bg: #d4e8dc;
+
+    /* Semantic — form errors stay red for clarity */
+    --error: #b42318;
+    --error-soft: #fef3f2;
+    --error-rgb: 180, 35, 24;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 6px -1px rgba(2, 48, 32, 0.06), 0 2px 4px -2px rgba(2, 48, 32, 0.04);
+    --shadow-md: 0 10px 25px -5px rgba(2, 48, 32, 0.1), 0 8px 10px -6px rgba(2, 48, 32, 0.06);
+    --shadow-md-primary: 0 4px 14px rgba(var(--primary-rgb), 0.28);
+    --shadow-lg: 0 20px 40px -12px rgba(2, 48, 32, 0.15);
+    --shadow-primary: 0 4px 14px rgba(var(--primary-rgb), 0.28);
+    --shadow-primary-hover: 0 6px 18px rgba(var(--primary-rgb), 0.32);
+
+    /* Layout — fixed header = wrapper inset + bar (logo row) */
+    --navbar-wrapper-top: 24px;
+    --navbar-inner-height: 76px;
+    --navbar-height: calc(var(--navbar-wrapper-top) + var(--navbar-inner-height));
+    --page-top-gap: 24px;
+    --clear-site-header: calc(var(--navbar-height) + var(--page-top-gap));
+    --sticky-below-header: calc(var(--navbar-height) + 12px);
+    --site-header-offset: var(--navbar-height);
+    --mobile-topbar-height: 88px;
+    --mobile-tab-bar-height: 64px;
+    --mobile-sticky-action-bar-height: 76px;
+    --navbar-max-width: 1280px;
+    --hero-max-width: 1200px;
+    --transition: 0.2s ease;
+    --transition-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* Brand typography */
+    --font-heading: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-body: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    /* Type scale — desktop (locked, 768px+) */
+    --d-h1-size: 2.25rem;
+    --d-h1-lh: 1.2;
+    --d-h1-weight: 700;
+
+    --d-h2-size: 1.5rem;
+    --d-h2-lh: 1.3;
+    --d-h2-weight: 600;
+
+    --d-h3-size: 1.125rem;
+    --d-h3-lh: 1.3;
+    --d-h3-weight: 600;
+
+    --d-body-size: 0.9375rem;
+    --d-body-lh: 1.5;
+    --d-body-weight: 400;
+
+    --d-btn-size: 1rem;
+    --d-btn-lh: 1;
+    --d-btn-weight: 700;
+
+    --d-meta-size: 0.8125rem;
+    --d-meta-lh: 1.3;
+    --d-meta-weight: 500;
+
+    /* Aliases aligned to desktop scale */
+    --text-xs: var(--d-meta-size);
+    --text-sm: var(--d-body-size);
+    --text-base: var(--d-body-size);
+    --text-md: var(--d-body-size);
+    --text-lg: var(--d-h3-size);
+    --text-xl: var(--d-h2-size);
+    --text-2xl: var(--d-h2-size);
+    --text-3xl: var(--d-h1-size);
+    --text-4xl: var(--d-h1-size);
+    --leading-body: var(--d-body-lh);
+    --leading-heading: var(--d-h2-lh);
+
+    /* Locale */
+    --currency-code: GBP;
+    --currency-symbol: £;
+
+    /* Legacy aliases */
+    --font-display: var(--font-heading);
+    --font-script: var(--font-heading);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--d-body-size);
+    line-height: var(--d-body-lh);
+    font-weight: var(--d-body-weight);
+    background: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+    padding-top: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: var(--leading-heading);
+    text-transform: none;
+}
+
+p,
+.hero__subtitle,
+.navbar-pill,
+.navbar-badge {
+    font-family: var(--font-body);
+}
+
+button,
+.hero__btn,
+.hero__title {
+    font-family: var(--font-heading);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+@media (max-width: 767px) {
+    :root {
+        /* Food Delivery Mobile Typography Scale — locked */
+        --m-h1-size: 1.5rem;
+        --m-h1-lh: 1.2;
+        --m-h1-weight: 700;
+
+        --m-h2-size: 1.25rem;
+        --m-h2-lh: 1.3;
+        --m-h2-weight: 600;
+
+        --m-h3-size: 1rem;
+        --m-h3-lh: 1.3;
+        --m-h3-weight: 600;
+
+        --m-body-size: 0.875rem;
+        --m-body-lh: 1.4;
+        --m-body-weight: 400;
+
+        --m-btn-size: 1rem;
+        --m-btn-lh: 1;
+        --m-btn-weight: 700;
+
+        --m-meta-size: 0.75rem;
+        --m-meta-lh: 1.2;
+        --m-meta-weight: 500;
+
+        /* Aliases aligned to mobile scale */
+        --text-xs: var(--m-meta-size);
+        --text-sm: var(--m-body-size);
+        --text-base: var(--m-h3-size);
+        --text-md: var(--m-btn-size);
+        --text-lg: var(--m-h3-size);
+        --text-xl: var(--m-h2-size);
+        --text-2xl: var(--m-h1-size);
+        --text-3xl: var(--m-h1-size);
+        --text-4xl: var(--m-h1-size);
+        --leading-body: var(--m-body-lh);
+        --leading-heading: var(--m-h2-lh);
+    }
+
+    body {
+        font-size: var(--m-body-size);
+        line-height: var(--m-body-lh);
+        font-weight: var(--m-body-weight);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

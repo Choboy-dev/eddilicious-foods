@@ -1,0 +1,310 @@
+/* ============================================
+   Eddilicious Foods — Admin rich text editor
+   ============================================ */
+
+.rich-editor {
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--background);
+    box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.rich-editor.is-style-open {
+    z-index: 30;
+}
+
+.rich-editor__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    background: var(--background-soft);
+    border-bottom: 1px solid var(--border);
+    border-radius: 12px 12px 0 0;
+}
+
+.rich-editor__group {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.rich-editor__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    color: var(--foreground-muted);
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.rich-editor__btn:hover {
+    color: var(--foreground);
+    border-color: rgba(var(--primary-rgb), 0.35);
+    background: var(--primary-faint);
+}
+
+.rich-editor__btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.rich-editor__divider {
+    flex: 0 0 1px;
+    width: 1px;
+    height: 24px;
+    margin: 0 2px;
+    background: var(--border);
+}
+
+.rich-editor__style {
+    position: relative;
+    margin-left: auto;
+    min-width: 168px;
+}
+
+.rich-editor__style-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    min-height: 36px;
+    padding: 0 10px 0 12px;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--foreground);
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.rich-editor__style-trigger:hover,
+.rich-editor.is-style-open .rich-editor__style-trigger {
+    border-color: rgba(var(--primary-rgb), 0.45);
+    background: var(--background);
+    box-shadow: 0 0 0 3px var(--primary-faint);
+}
+
+.rich-editor__style-trigger:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.rich-editor__style-value {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rich-editor__style-chevron {
+    flex: 0 0 auto;
+    color: var(--foreground-muted);
+    transition: transform 0.15s ease;
+}
+
+.rich-editor.is-style-open .rich-editor__style-chevron {
+    transform: rotate(180deg);
+}
+
+.rich-editor__style-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    left: 0;
+    z-index: 40;
+    display: grid;
+    gap: 2px;
+    padding: 6px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+}
+
+.rich-editor__style-menu[hidden] {
+    display: none !important;
+}
+
+.rich-editor__style-option {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px 10px;
+    text-align: left;
+    font-family: var(--font-body);
+    color: var(--foreground);
+    background: transparent;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.rich-editor__style-option:hover {
+    background: var(--background-soft);
+}
+
+.rich-editor__style-option.is-active {
+    background: var(--primary-faint);
+    color: var(--primary);
+}
+
+.rich-editor__style-option:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.rich-editor__style-option-tag {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--foreground-muted);
+}
+
+.rich-editor__style-option.is-active .rich-editor__style-option-tag {
+    color: var(--primary);
+}
+
+.rich-editor__style-option-label {
+    font-size: 0.875rem;
+    line-height: 1.3;
+}
+
+.rich-editor__body {
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+}
+
+.rich-editor__surface {
+    min-height: 180px;
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 14px 16px;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--foreground);
+}
+
+.rich-editor__surface:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px rgba(var(--primary-rgb), 0.18);
+}
+
+.rich-editor__surface.is-empty::before {
+    content: attr(data-placeholder);
+    color: var(--foreground-muted);
+    pointer-events: none;
+}
+
+.rich-editor__surface p,
+.rich-editor__surface h1,
+.rich-editor__surface h2,
+.rich-editor__surface h3,
+.rich-editor__surface h4,
+.rich-editor__surface h5,
+.rich-editor__surface ul,
+.rich-editor__surface ol {
+    margin: 0 0 12px;
+}
+
+.rich-editor__surface p:last-child,
+.rich-editor__surface h1:last-child,
+.rich-editor__surface h2:last-child,
+.rich-editor__surface h3:last-child,
+.rich-editor__surface h4:last-child,
+.rich-editor__surface h5:last-child,
+.rich-editor__surface ul:last-child,
+.rich-editor__surface ol:last-child {
+    margin-bottom: 0;
+}
+
+.rich-editor__surface h1,
+.rich-editor__surface h2,
+.rich-editor__surface h3,
+.rich-editor__surface h4,
+.rich-editor__surface h5 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.rich-editor__surface h1 { font-size: 1.375rem; }
+.rich-editor__surface h2 { font-size: 1.25rem; }
+.rich-editor__surface h3 { font-size: 1.125rem; }
+.rich-editor__surface h4 { font-size: 1rem; }
+.rich-editor__surface h5 { font-size: 0.9375rem; }
+
+.rich-editor__surface ul,
+.rich-editor__surface ol {
+    padding-left: 1.35rem;
+}
+
+.rich-editor__surface li + li {
+    margin-top: 6px;
+}
+
+.rich-editor__surface strong,
+.rich-editor__surface b {
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+/* Keep editor controls out of global admin form select styles */
+.admin-field .rich-editor select {
+    width: auto;
+    padding: 0;
+}
+
+.meal-description--rich .admin-field__hint {
+    margin-top: 8px;
+}
+
+.rich-editor__label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+[data-meal-description-editor] {
+    min-height: 220px;
+}
+
+@media (max-width: 560px) {
+    .rich-editor__style {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .rich-editor__toolbar {
+        gap: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rich-editor__btn,
+    .rich-editor__style-trigger,
+    .rich-editor__style-option,
+    .rich-editor__style-chevron {
+        transition: none;
+    }
+}

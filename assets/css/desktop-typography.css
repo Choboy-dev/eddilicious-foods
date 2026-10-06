@@ -1,0 +1,332 @@
+/* ============================================
+   Food Delivery Desktop Typography Scale (locked)
+   min-width: 768px
+   ============================================ */
+@media (min-width: 768px) {
+    /* ---- Utility classes (use on all new desktop UI) ---- */
+    .type-h1 {
+        font-family: var(--font-heading);
+        font-size: var(--d-h1-size) !important;
+        line-height: var(--d-h1-lh) !important;
+        font-weight: var(--d-h1-weight) !important;
+    }
+
+    .type-h2 {
+        font-family: var(--font-heading);
+        font-size: var(--d-h2-size) !important;
+        line-height: var(--d-h2-lh) !important;
+        font-weight: var(--d-h2-weight) !important;
+    }
+
+    .type-h3 {
+        font-family: var(--font-heading);
+        font-size: var(--d-h3-size) !important;
+        line-height: var(--d-h3-lh) !important;
+        font-weight: var(--d-h3-weight) !important;
+    }
+
+    .type-body {
+        font-family: var(--font-body);
+        font-size: var(--d-body-size) !important;
+        line-height: var(--d-body-lh) !important;
+        font-weight: var(--d-body-weight) !important;
+    }
+
+    .type-btn {
+        font-family: var(--font-heading);
+        font-size: var(--d-btn-size) !important;
+        line-height: var(--d-btn-lh) !important;
+        font-weight: var(--d-btn-weight) !important;
+    }
+
+    .type-meta {
+        font-family: var(--font-body);
+        font-size: var(--d-meta-size) !important;
+        line-height: var(--d-meta-lh) !important;
+        font-weight: var(--d-meta-weight) !important;
+    }
+
+    /* ---- Semantic headings ---- */
+    h1:not(.hero__title) {
+        font-size: var(--d-h1-size) !important;
+        line-height: var(--d-h1-lh) !important;
+        font-weight: var(--d-h1-weight) !important;
+    }
+
+    h2:not(.hero__title) {
+        font-size: var(--d-h2-size) !important;
+        line-height: var(--d-h2-lh) !important;
+        font-weight: var(--d-h2-weight) !important;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: var(--d-h3-size) !important;
+        line-height: var(--d-h3-lh) !important;
+        font-weight: var(--d-h3-weight) !important;
+    }
+
+    p,
+    li,
+    label,
+    input,
+    select,
+    textarea {
+        font-size: var(--d-body-size) !important;
+        line-height: var(--d-body-lh) !important;
+        font-weight: var(--d-body-weight) !important;
+    }
+
+    /* ---- H1: hero / screen titles ---- */
+    .shop-page__title,
+    .cart-basket__title,
+    .wishlist-header__title,
+    .search-page__title,
+    .checkout-header__title,
+    .checkout-success__title,
+    .contact-header__title,
+    .contact-faq__title,
+    .about-hero__title,
+    .product-detail__title,
+    .product-empty__title,
+    .auth-card__title,
+    .account-header__title {
+        font-size: var(--d-h1-size) !important;
+        line-height: var(--d-h1-lh) !important;
+        font-weight: var(--d-h1-weight) !important;
+    }
+
+    h2.catering-cta__title {
+        font-size: clamp(3rem, 4.25vw, 4.25rem) !important;
+        line-height: 1.15 !important;
+        font-weight: 700 !important;
+    }
+
+    /* ---- H2: section headers ---- */
+    .product-section__title,
+    .product-section__title--upper,
+    .checkout-card__title,
+    .checkout-summary__title,
+    .contact-card__title,
+    .contact-success__title,
+    .contact-info-card__title,
+    .contact-cta__title,
+    .about-story__title,
+    .about-section-head__title,
+    .about-purpose__title,
+    .about-contact__title,
+    .legal-header__title,
+    .product-related__title,
+    .auth-otp__title,
+    .account-card__title,
+    .product-tabs__tab,
+    .site-footer__heading {
+        font-size: var(--d-h2-size) !important;
+        line-height: var(--d-h2-lh) !important;
+        font-weight: var(--d-h2-weight) !important;
+    }
+
+    /* ---- H3: item names ---- */
+    .product-card__name,
+    .product-card__name-link,
+    .cart-item__name,
+    .search-overlay__name,
+    .search-page__query,
+    .contact-quick__label,
+    .about-service-card__title,
+    .about-reason__title,
+    .legal-section__heading,
+    .contact-faq__question,
+    .product-card__price,
+    .product-card__price-value,
+    .product-detail__price-value,
+    .product-detail__price-placeholder,
+    .product-sizes__option-price,
+    .cart-item__price,
+    .cart-summary__total strong,
+    .checkout-summary__total strong,
+    .wishlist-page .wishlist-items .product-card__name,
+    .wishlist-page .wishlist-items .product-card__price,
+    .account-profile__name,
+    .auth-otp__digit,
+    .product-review__name {
+        font-size: var(--d-h3-size) !important;
+        line-height: var(--d-h3-lh) !important;
+        font-weight: var(--d-h3-weight) !important;
+    }
+
+    /* ---- Body: descriptions ---- */
+    .shop-page__subtitle,
+    .wishlist-header__lead,
+    .search-page__meta,
+    .checkout-header__lead,
+    .contact-header__lead,
+    .about-hero__lead,
+    .about-story__text,
+    .about-purpose__text,
+    .about-service-card__text,
+    .about-reason__text,
+    .about-contact__text,
+    .legal-header__lead,
+    .legal-section__text,
+    .legal-section__list,
+    .product-detail__description,
+    .product-detail__size-note,
+    .product-trust__item,
+    .product-breadcrumb,
+    .product-breadcrumb__link,
+    .product-related__name,
+    .product-related__price,
+    .product-related__link,
+    .product-empty__text,
+    .product-sizes__label,
+    .product-sizes__option-main,
+    .product-tabs__intro,
+    .product-tabs__text,
+    .product-tabs__list,
+    .product-tabs__empty,
+    .product-review__text,
+    .product-detail__rating-text,
+    .auth-card__lead,
+    .auth-input,
+    .auth-switch,
+    .auth-otp__lead,
+    .auth-legal,
+    .account-header__lead,
+    .account-links__item,
+    .account-profile__email,
+    .account-profile__since,
+    .catering-cta__lead,
+    .contact-cta__text,
+    .contact-card__hint,
+    .contact-info-card__text,
+    .contact-faq__answer,
+    .cart-basket__empty p,
+    .cart-summary__row,
+    .cart-summary__label,
+    .cart-summary__input,
+    .cart-summary__hint,
+    .cart-fulfillment__label,
+    .cart-fulfillment__meta,
+    .wishlist-empty p,
+    .wishlist-summary__count,
+    .wishlist-summary__hint,
+    .search-overlay__input,
+    .search-overlay__chip,
+    .search-overlay__meta,
+    .search-overlay__price,
+    .search-overlay__empty p,
+    .search-page__input,
+    .search-page__chip,
+    .search-page__empty p,
+    .checkout-input,
+    .checkout-textarea,
+    .checkout-select,
+    .checkout-label,
+    .checkout-fulfillment__label,
+    .checkout-fulfillment__meta,
+    .checkout-summary__row,
+    .checkout-summary__hint,
+    .checkout-empty p,
+    .checkout-success__text,
+    .contact-label,
+    .contact-input,
+    .contact-textarea,
+    .contact-select,
+    .site-footer__input,
+    .site-footer__form-note,
+    .site-footer__policy,
+    .site-footer__links a,
+    .site-footer__copyright,
+    .site-footer__bar-links a,
+    .promo-banner__lead,
+    .promo-banner__hint,
+    .qty-dropdown__trigger,
+    .qty-dropdown__option-main,
+    .shop-categories__link,
+    .shop-toolbar__select,
+    .shop-empty,
+    .product-section__view-all,
+    .navbar-pill,
+    .navbar-dropdown__link {
+        font-size: var(--d-body-size) !important;
+        line-height: var(--d-body-lh) !important;
+        font-weight: var(--d-body-weight) !important;
+    }
+
+    /* ---- Primary buttons ---- */
+    .product-card__cart,
+    .cart-basket__shop-link,
+    .cart-checkout,
+    .cart-summary__apply,
+    .wishlist-empty__link,
+    .wishlist-summary__browse,
+    .wishlist-summary__cart,
+    .search-overlay__view-all,
+    .search-page__submit,
+    .checkout-pay__btn,
+    .checkout-step-nav__back,
+    .checkout-step-nav__next,
+    .checkout-step-nav__submit,
+    .contact-submit,
+    .catering-cta__btn,
+    .about-btn,
+    .product-btn,
+    .product-btn--primary,
+    .auth-btn,
+    .auth-btn--primary,
+    .auth-btn--ghost,
+    .shop-more-btn,
+    .site-footer__subscribe,
+    a.product-btn,
+    .product-btn--wishlist,
+    button:not(.navbar-badge):not(.mobile-tab-bar__badge):not(.mobile-nav__close):not(.navbar-mobile-toggle):not(.search-overlay__close):not(.product-card__action):not(.hero__btn):not(.catering-btn):not(.cookie-consent__btn) {
+        font-size: var(--d-btn-size) !important;
+        line-height: var(--d-btn-lh) !important;
+        font-weight: var(--d-btn-weight) !important;
+    }
+
+    /* ---- Meta / secondary ---- */
+    .cart-item__meta,
+    .cart-item__remove,
+    .cart-summary__remove-coupon,
+    .checkout-steps__label,
+    .checkout-steps__number,
+    .product-detail__category,
+    .product-detail__badge,
+    .product-breadcrumb__current,
+    .product-qty__label,
+    .product-review__meta,
+    .product-review__verified,
+    .product-gallery__counter,
+    .auth-label,
+    .auth-divider,
+    .auth-back,
+    .auth-otp__hint,
+    .auth-otp__resend,
+    .account-header__eyebrow,
+    .about-hero__eyebrow,
+    .about-section-head__eyebrow,
+    .about-purpose__eyebrow,
+    .legal-header__eyebrow,
+    .product-card__price-compare,
+    .product-detail__price-compare,
+    .shop-toolbar__label,
+    .shop-toolbar__count,
+    .qty-dropdown__option-sub,
+    .product-card__sale-badge,
+    .wishlist-page .wishlist-items .product-card__sale-badge,
+    .search-overlay__label,
+    .navbar-badge,
+    .contact-header__eyebrow,
+    .contact-quick__hint,
+    .catering-cta__eyebrow,
+    .promo-banner__code,
+    .site-footer__form-label {
+        font-size: var(--d-meta-size) !important;
+        line-height: var(--d-meta-lh) !important;
+        font-weight: var(--d-meta-weight) !important;
+    }
+}

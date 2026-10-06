@@ -1,0 +1,33 @@
+/* Shared notice: orders need at least 24 hours notice */
+
+.order-lead-notice {
+    margin: 0;
+    padding: 14px 16px;
+    background: var(--primary-faint);
+    border: 1px solid var(--primary-soft);
+    border-radius: 12px;
+    color: var(--foreground);
+}
+
+.order-lead-notice__text {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    line-height: 1.55;
+}
+
+.order-lead-notice__text + .order-lead-notice__text {
+    margin-top: 8px;
+}
+
+.order-lead-notice--compact {
+    padding: 10px 12px;
+}
+
+.order-lead-notice--compact .order-lead-notice__text {
+    font-size: 0.8125rem;
+}
+
+.checkout-page .order-lead-notice {
+    margin-bottom: 16px;
+}

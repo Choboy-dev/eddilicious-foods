@@ -1,0 +1,259 @@
+/* ============================================
+   Edilicious Foods — Catering CTA Section
+   ============================================ */
+
+.catering-cta {
+    padding: 72px 16px;
+    background: linear-gradient(165deg, var(--background-soft) 0%, #ffffff 45%, var(--primary-soft) 100%);
+    overflow: hidden;
+}
+
+.catering-cta__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: var(--hero-max-width);
+    margin: 0 auto;
+}
+
+/* ---- Content ---- */
+.catering-cta__content {
+    max-width: 520px;
+}
+
+.catering-cta__eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--primary);
+    margin-bottom: 14px;
+}
+
+.catering-cta__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4.25vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--foreground);
+    letter-spacing: -0.03em;
+    margin-bottom: 18px;
+}
+
+.catering-cta__title-keep {
+    white-space: nowrap;
+}
+
+.catering-cta__text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--foreground-muted);
+    margin-bottom: 28px;
+}
+
+.catering-cta__events {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    list-style: none;
+    margin: 0 0 32px;
+    padding: 0;
+}
+
+.catering-cta__event {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.catering-cta__event:hover {
+    border-color: rgba(var(--primary-rgb), 0.25);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.catering-cta__event-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    color: var(--primary);
+    background: var(--primary-soft);
+    border-radius: 10px;
+}
+
+.catering-cta__event-name {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--foreground);
+    line-height: 1.3;
+}
+
+.catering-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.catering-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.catering-cta__btn--primary {
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border: 1.5px solid var(--primary);
+    box-shadow: 0 4px 18px rgba(var(--primary-rgb), 0.35);
+}
+
+.catering-cta__btn--primary:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.4);
+}
+
+.catering-cta__btn--ghost {
+    color: var(--foreground);
+    background: transparent;
+    border: 1.5px solid var(--foreground);
+}
+
+.catering-cta__btn--ghost:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: var(--primary-soft);
+}
+
+.catering-cta__btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* ---- Gallery image ---- */
+.catering-cta__gallery {
+    width: 100%;
+}
+
+.catering-cta__gallery picture {
+    display: block;
+    width: 100%;
+}
+
+.catering-cta__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 3px solid #000000;
+    border-radius: 16px;
+}
+
+@media (min-width: 768px) {
+    .catering-cta__image {
+        border-width: 5px;
+        border-radius: 20px;
+    }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 992px) {
+    .catering-cta__container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .catering-cta__content {
+        display: contents;
+    }
+
+    .catering-cta__eyebrow {
+        order: 1;
+    }
+
+    .catering-cta__gallery {
+        order: 2;
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .catering-cta__title {
+        order: 3;
+    }
+
+    .catering-cta__text {
+        order: 4;
+    }
+
+    .catering-cta__events {
+        order: 5;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .catering-cta__actions {
+        order: 6;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .catering-cta {
+        padding: 48px 16px;
+    }
+
+    .catering-cta__events {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        max-width: none;
+    }
+
+    .catering-cta__event {
+        padding: 12px;
+    }
+
+    .catering-cta__event-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .catering-cta__event-name {
+        font-size: 0.8125rem;
+    }
+
+    .catering-cta__actions {
+        flex-direction: column;
+    }
+
+    .catering-cta__btn {
+        width: 100%;
+    }
+
+}

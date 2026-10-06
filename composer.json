@@ -1,0 +1,11 @@
+{
+    "name": "eddiliciousfoods/site",
+    "description": "Eddilicious Foods — Nigerian food delivery",
+    "require": {
+        "php": ">=8.0",
+        "stripe/stripe-php": "^16.0"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

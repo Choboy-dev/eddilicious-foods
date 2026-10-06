@@ -1,0 +1,65 @@
+/* Shared brand logo image */
+.brand-logo,
+.navbar-logo,
+.mobile-nav__logo,
+.site-footer__logo,
+.auth-card__logo,
+.admin-sidebar__logo,
+.admin-signin__logo,
+.admin-mobile-bar__logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    line-height: 0;
+}
+
+.brand-logo__img,
+.navbar-logo__img,
+.mobile-nav__logo__img,
+.site-footer__logo__img,
+.auth-card__logo__img,
+.admin-sidebar__logo__img,
+.admin-signin__logo__img,
+.admin-mobile-bar__logo__img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navbar — logo art has wide padding in the file, so display it larger */
+.navbar-logo__img {
+    height: 52px;
+}
+
+.mobile-nav__logo__img {
+    height: 44px;
+}
+
+@media (min-width: 768px) {
+    .navbar-logo__img {
+        height: 76px;
+    }
+}
+
+.site-footer__logo__img {
+    height: 64px;
+}
+
+.auth-card__logo__img {
+    height: 60px;
+}
+
+.admin-sidebar__logo__img {
+    height: 42px;
+}
+
+.admin-mobile-bar__logo__img {
+    height: 28px;
+}
+
+.admin-signin__logo__img {
+    height: 56px;
+}

@@ -1,0 +1,497 @@
+/* ============================================
+   Eddilicious Foods — Legal pages
+   ============================================ */
+
+.legal-page {
+    padding-top: var(--clear-site-header);
+    padding-bottom: calc(80px + var(--mobile-tab-bar-height) + env(safe-area-inset-bottom, 0px));
+    background: var(--background-soft);
+}
+
+.legal-page__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+.legal-header {
+    max-width: 640px;
+    margin-bottom: 28px;
+}
+
+.legal-header__eyebrow {
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 6px 14px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--primary);
+    background: var(--primary-soft);
+    border-radius: 9999px;
+}
+
+.legal-header__title {
+    margin: 0 0 10px;
+    font-family: var(--font-heading);
+    font-size: clamp(1.625rem, 4vw, 2.125rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--foreground);
+}
+
+.legal-header__lead {
+    margin: 0 0 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--foreground-muted);
+}
+
+.legal-header__updated {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: var(--foreground-muted);
+}
+
+.legal-callout {
+    display: grid;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 18px 20px;
+    background: var(--background);
+    border: 1px solid rgba(2, 48, 32, 0.16);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.legal-callout__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--primary);
+    background: var(--primary-soft);
+    border-radius: 12px;
+}
+
+.legal-callout__title {
+    margin: 0 0 6px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.legal-callout__text {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--foreground-muted);
+}
+
+.legal-callout__btn {
+    justify-self: start;
+    min-height: 42px;
+    padding: 0 16px;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.legal-callout__btn:hover {
+    background: var(--primary-hover);
+}
+
+.legal-callout__btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.legal-table-wrap {
+    overflow-x: auto;
+    margin-top: 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.legal-table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.legal-table__caption {
+    padding: 12px 14px;
+    font-weight: 600;
+    text-align: left;
+    color: var(--foreground);
+    background: var(--background-soft);
+    border-bottom: 1px solid var(--border);
+}
+
+.legal-table th,
+.legal-table td {
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+}
+
+.legal-table th {
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--foreground);
+    background: var(--background-soft);
+}
+
+.legal-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.legal-page--cookies .legal-section__heading {
+    color: var(--foreground);
+}
+
+.legal-layout {
+    display: grid;
+    gap: 24px;
+}
+
+.legal-nav {
+    padding: 18px 16px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+}
+
+.legal-nav__label,
+.legal-toc__label {
+    margin: 0 0 10px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: none;
+    color: var(--foreground-muted);
+}
+
+.legal-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.legal-nav__link {
+    display: block;
+    padding: 10px 12px;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--foreground-muted);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background var(--transition), color var(--transition);
+}
+
+.legal-nav__link:hover {
+    color: var(--primary);
+    background: var(--primary-faint);
+}
+
+.legal-nav__link.is-active {
+    color: var(--primary);
+    font-weight: 600;
+    background: var(--primary-soft);
+}
+
+.legal-content {
+    min-width: 0;
+}
+
+.legal-toc {
+    display: none;
+    margin-bottom: 24px;
+    padding: 18px 20px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.legal-toc__list {
+    margin: 0;
+    padding-left: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legal-toc__link {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.legal-toc__link:hover {
+    text-decoration: underline;
+}
+
+.legal-sections {
+    padding: 24px 20px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.legal-section {
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: var(--sticky-below-header);
+}
+
+.legal-section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.legal-section__heading {
+    margin: 0 0 12px;
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--foreground);
+}
+
+.legal-section__text {
+    margin: 0 0 12px;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--foreground-muted);
+}
+
+.legal-section__text:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section__list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--foreground-muted);
+}
+
+.legal-section__list li {
+    margin-bottom: 8px;
+}
+
+.legal-section__list li:last-child {
+    margin-bottom: 0;
+}
+
+.legal-documents {
+    display: grid;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.legal-document {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid rgba(30, 58, 138, 0.14);
+    border-radius: 14px;
+}
+
+.legal-document__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: #1e3a8a;
+    background: rgba(30, 58, 138, 0.08);
+    border-radius: 12px;
+}
+
+.legal-document__title {
+    margin: 0 0 6px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.legal-document__text {
+    margin: 0 0 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--foreground-muted);
+}
+
+.legal-document__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.legal-document__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 14px;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid rgba(30, 58, 138, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.legal-document__btn:hover {
+    background: rgba(30, 58, 138, 0.06);
+    border-color: rgba(30, 58, 138, 0.35);
+}
+
+.legal-document__btn--primary {
+    color: #fff;
+    background: #1e3a8a;
+    border-color: #1e3a8a;
+}
+
+.legal-document__btn--primary:hover {
+    background: #1e40af;
+    border-color: #1e40af;
+}
+
+.legal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--accent-soft);
+    border: 1px solid rgba(var(--accent-rgb), 0.2);
+    border-radius: 14px;
+}
+
+.legal-footer__text {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--foreground-muted);
+}
+
+.legal-footer__link {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.legal-footer__link:hover {
+    text-decoration: underline;
+}
+
+.legal-footer__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 16px;
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--primary-foreground);
+    text-decoration: none;
+    background: var(--primary);
+    border-radius: 10px;
+    transition: background var(--transition);
+}
+
+.legal-footer__cta:hover {
+    background: var(--primary-hover);
+}
+
+@media (min-width: 900px) {
+    .legal-page {
+        padding-bottom: 64px;
+    }
+
+    .legal-page__container {
+        padding: 32px 24px 56px;
+    }
+
+    .legal-callout {
+        grid-template-columns: auto 1fr auto;
+        gap: 18px;
+        padding: 20px 24px;
+    }
+
+    .legal-callout__btn {
+        justify-self: end;
+    }
+
+    .legal-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 28px;
+        align-items: start;
+    }
+
+    .legal-nav {
+        position: sticky;
+        top: var(--sticky-below-header);
+    }
+
+    .legal-toc {
+        display: block;
+    }
+
+    .legal-sections {
+        padding: 32px 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .legal-nav__link,
+    .legal-footer__cta,
+    .legal-callout__btn {
+        transition: none;
+    }
+}

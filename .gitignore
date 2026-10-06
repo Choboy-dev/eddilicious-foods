@@ -1,0 +1,18 @@
+# Secrets and local config
+.env
+storage/*
+!storage/.gitkeep
+
+# Composer
+/vendor/
+composer.phar
+composer-setup.php
+
+# Files the owner uploads through the admin
+assets/uploads/meals/*
+!assets/uploads/meals/.gitkeep
+
+# Local tooling and editor files
+.tools/
+.cursor/
+.DS_Store

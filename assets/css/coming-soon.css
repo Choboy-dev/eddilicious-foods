@@ -1,0 +1,269 @@
+/* Coming soon — Eddilicious Foods */
+
+.coming-soon-body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Karla', var(--font-body);
+    color: #450a0a;
+    background: #fef2f2;
+}
+
+.coming-soon {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 20px 40px;
+}
+
+.coming-soon__glow {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.coming-soon__glow--left {
+    top: -80px;
+    left: -60px;
+    background: #f87171;
+}
+
+.coming-soon__glow--right {
+    right: -80px;
+    bottom: 120px;
+    background: #ca8a04;
+}
+
+.coming-soon__brand {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+}
+
+.coming-soon__logo {
+    display: inline-block;
+    line-height: 0;
+}
+
+.coming-soon__main {
+    position: relative;
+    z-index: 1;
+    width: min(720px, 100%);
+    text-align: center;
+}
+
+.coming-soon__eyebrow {
+    margin: 0 0 12px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #dc2626;
+}
+
+.coming-soon__title {
+    margin: 0 0 16px;
+    font-family: 'Playfair Display SC', var(--font-heading);
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    line-height: 1.1;
+    font-weight: 700;
+    color: #450a0a;
+}
+
+.coming-soon__lead {
+    margin: 0 auto 28px;
+    max-width: 34rem;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: rgba(69, 10, 10, 0.82);
+}
+
+.coming-soon__visual {
+    position: relative;
+    margin: 0 auto 32px;
+    max-width: 520px;
+}
+
+.coming-soon__hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(220, 38, 38, 0.18);
+    object-fit: cover;
+}
+
+.coming-soon__badge {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    padding: 8px 14px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #450a0a;
+    background: #fde68a;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.coming-soon__notify {
+    margin: 0 auto 24px;
+    padding: 24px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid rgba(220, 38, 38, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(69, 10, 10, 0.06);
+}
+
+.coming-soon__notify-title {
+    margin: 0 0 8px;
+    font-family: 'Playfair Display SC', var(--font-heading);
+    font-size: 1.375rem;
+    color: #450a0a;
+}
+
+.coming-soon__notify-lead {
+    margin: 0 0 16px;
+    font-size: 0.9375rem;
+    color: rgba(69, 10, 10, 0.72);
+}
+
+.coming-soon__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.coming-soon__form-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+.coming-soon__input {
+    width: 100%;
+    padding: 12px 14px;
+    font: inherit;
+    color: #450a0a;
+    background: #fff;
+    border: 1px solid rgba(69, 10, 10, 0.16);
+    border-radius: 12px;
+}
+
+.coming-soon__input:focus {
+    outline: 2px solid rgba(220, 38, 38, 0.35);
+    border-color: #dc2626;
+}
+
+.coming-soon__btn {
+    padding: 12px 18px;
+    font: inherit;
+    font-weight: 700;
+    color: #fff;
+    background: #dc2626;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.coming-soon__btn:hover {
+    background: #b91c1c;
+}
+
+.coming-soon__btn:focus-visible {
+    outline: 2px solid #450a0a;
+    outline-offset: 2px;
+}
+
+.coming-soon__message {
+    margin: 12px 0 0;
+    font-size: 0.875rem;
+}
+
+.coming-soon__message.is-success {
+    color: #166534;
+}
+
+.coming-soon__message.is-error {
+    color: #991b1b;
+}
+
+.coming-soon__contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+    margin-bottom: 16px;
+}
+
+.coming-soon__contact-link {
+    font-weight: 600;
+    color: #dc2626;
+    text-decoration: none;
+}
+
+.coming-soon__contact-link:hover {
+    text-decoration: underline;
+}
+
+.coming-soon__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.coming-soon__social a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(69, 10, 10, 0.72);
+    text-decoration: none;
+}
+
+.coming-soon__social a:hover {
+    color: #dc2626;
+}
+
+.coming-soon__footer {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    padding-top: 32px;
+    font-size: 0.8125rem;
+    color: rgba(69, 10, 10, 0.55);
+}
+
+.coming-soon__footer p {
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .coming-soon__form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .coming-soon__btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .coming-soon__btn {
+        transition: none;
+    }
+}

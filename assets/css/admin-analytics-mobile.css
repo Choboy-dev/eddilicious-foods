@@ -1,0 +1,321 @@
+/**
+ * Admin analytics — mobile layout only (max-width 1023px).
+ */
+
+@media (min-width: 1024px) {
+    .admin-analytics__stats-grid {
+        display: contents;
+    }
+}
+
+@media (max-width: 1023px) {
+    /* ---- Page rhythm ---- */
+    .admin-page-analytics .admin-topbar__eyebrow {
+        display: none;
+    }
+
+    .admin-page-analytics .admin-topbar {
+        padding-top: 10px;
+        padding-bottom: 6px;
+        gap: 8px;
+    }
+
+    .admin-page-analytics .admin-topbar__title {
+        font-size: 1.375rem;
+    }
+
+    .admin-page-analytics .admin-main {
+        padding: 12px 14px 24px;
+        gap: 14px;
+    }
+
+    .admin-analytics {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    /* ---- Period panel ---- */
+    .admin-analytics__period {
+        margin-bottom: 0;
+        padding: 14px;
+        border-radius: 14px;
+        box-shadow: none;
+        background: var(--background-soft);
+        border-color: rgba(var(--primary-rgb), 0.08);
+    }
+
+    .admin-analytics__period .admin-period-panel__head {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        margin-bottom: 12px;
+    }
+
+    .admin-analytics__period .admin-period-panel__title {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: var(--foreground-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .admin-analytics__period .admin-period-panel__range {
+        margin-top: 2px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--foreground);
+    }
+
+    .admin-analytics__period .admin-period-panel__hint {
+        margin-top: 6px;
+        font-size: 0.75rem;
+        white-space: normal;
+    }
+
+    .admin-analytics__period-filter {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 6px;
+        padding: 5px;
+        border-radius: 12px;
+        background: var(--background);
+    }
+
+    .admin-analytics__period-filter::-webkit-scrollbar {
+        display: none;
+    }
+
+    .admin-analytics__period-filter .admin-period-filter__btn {
+        flex: 0 0 auto;
+        min-width: 0;
+        padding: 10px 14px;
+        white-space: nowrap;
+        font-size: 0.8125rem;
+        border-radius: 10px;
+    }
+
+    .admin-analytics__period-filter .admin-period-filter__btn.is-active {
+        background: var(--primary);
+        color: var(--primary-foreground);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .admin-analytics__period .admin-period-custom__fields {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-analytics__period .admin-period-custom__field {
+        flex: 1 1 auto;
+    }
+
+    /* ---- Setup alert ---- */
+    .admin-analytics__setup {
+        margin: 0;
+        padding: 12px 14px;
+        font-size: 0.8125rem;
+        line-height: 1.45;
+        border-radius: 12px;
+    }
+
+    .admin-analytics__setup p {
+        margin: 0;
+    }
+
+    .admin-analytics__setup code {
+        font-size: 0.75rem;
+        word-break: break-all;
+    }
+
+    /* ---- KPI metrics ---- */
+    .admin-analytics__metrics {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        grid-template-columns: none;
+    }
+
+    .admin-analytics__hero {
+        padding: 18px 18px 16px;
+        border: none;
+        border-radius: 16px;
+        background: linear-gradient(145deg, #1e40af 0%, #2563eb 50%, #1d4ed8 100%);
+        box-shadow: 0 4px 14px rgba(30, 64, 175, 0.28);
+    }
+
+    .admin-analytics__hero .admin-stat__label {
+        margin-bottom: 6px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.88);
+    }
+
+    .admin-analytics__hero .admin-stat__value {
+        font-size: clamp(2rem, 9vw, 2.5rem);
+        letter-spacing: -0.02em;
+        color: #fff;
+    }
+
+    .admin-analytics__hero .admin-stat__hint {
+        margin-top: 8px;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .admin-analytics__stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .admin-analytics__stat {
+        position: relative;
+        padding: 14px 14px 14px 16px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .admin-analytics__stat::before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        bottom: 12px;
+        left: 0;
+        width: 3px;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .admin-analytics__stat .admin-stat__label {
+        margin-bottom: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .admin-analytics__stat .admin-stat__value {
+        font-size: 1.375rem;
+    }
+
+    .admin-analytics__stat--sessions::before {
+        background: var(--primary);
+    }
+
+    .admin-analytics__stat--visitors::before {
+        background: #2563eb;
+    }
+
+    .admin-analytics__stat--bounce::before {
+        background: #d97706;
+    }
+
+    .admin-analytics__stat--depth::before {
+        background: #7c3aed;
+    }
+
+    /* ---- Panels ---- */
+    .admin-analytics__chart-row,
+    .admin-analytics__demographics,
+    .admin-analytics__pages-row,
+    .admin-analytics__geo-row {
+        gap: 12px;
+    }
+
+    .admin-analytics__panel,
+    .admin-analytics__chart {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .admin-analytics__panel .admin-panel__head,
+    .admin-analytics__chart .admin-panel__head {
+        margin-bottom: 10px;
+    }
+
+    .admin-analytics__panel .admin-panel__title,
+    .admin-analytics__chart .admin-panel__title {
+        font-size: 0.9375rem;
+        font-weight: 700;
+    }
+
+    .admin-analytics__panel .admin-panel__lead,
+    .admin-analytics__chart .admin-panel__lead {
+        font-size: 0.8125rem;
+        line-height: 1.45;
+    }
+
+    /* ---- Chart ---- */
+    .admin-analytics__chart .admin-chart-wrap {
+        margin: 0 -4px;
+        padding-bottom: 2px;
+    }
+
+    .admin-analytics__chart .admin-chart {
+        min-height: 120px;
+        align-items: flex-end;
+        gap: 6px;
+    }
+
+    .admin-analytics__chart .admin-chart--dense {
+        min-width: 0;
+    }
+
+    .admin-analytics__chart .admin-chart__bar {
+        max-height: 72px;
+        border-radius: 6px 6px 2px 2px;
+    }
+
+    .admin-analytics__chart .admin-chart__label {
+        font-size: 0.625rem;
+    }
+
+    .admin-analytics__chart .admin-chart__value {
+        font-size: 0.625rem;
+    }
+
+    /* ---- Breakdown lists ---- */
+    .admin-analytics .admin-breakdown__row {
+        padding: 10px 0;
+    }
+
+    .admin-analytics .admin-breakdown__label {
+        font-size: 0.8125rem;
+    }
+
+    .admin-analytics .admin-breakdown__value {
+        font-size: 0.875rem;
+    }
+
+    .admin-analytics .admin-breakdown__pct {
+        font-size: 0.6875rem;
+    }
+
+    .admin-analytics .admin-breakdown__bar {
+        height: 5px;
+    }
+
+    .admin-analytics .admin-empty--compact {
+        padding: 12px 0;
+    }
+
+    .admin-analytics .admin-empty--compact p {
+        font-size: 0.8125rem;
+        line-height: 1.45;
+    }
+
+    /* ---- Browsers / OS stack ---- */
+    .admin-analytics__browsers-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 1023px) and (prefers-reduced-motion: reduce) {
+    .admin-analytics__period-filter .admin-period-filter__btn,
+    .admin-analytics .admin-breakdown__bar::after {
+        transition: none;
+    }
+}

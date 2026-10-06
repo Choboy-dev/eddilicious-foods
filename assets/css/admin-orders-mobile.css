@@ -1,0 +1,277 @@
+/**
+ * Admin orders — mobile layout only (max-width 1023px).
+ */
+
+@media (max-width: 1023px) {
+    /* ---- Page rhythm ---- */
+    .admin-page-orders .admin-topbar__eyebrow {
+        display: none;
+    }
+
+    .admin-page-orders .admin-topbar {
+        padding-top: 10px;
+        padding-bottom: 6px;
+        gap: 8px;
+    }
+
+    .admin-page-orders .admin-topbar__title {
+        font-size: 1.375rem;
+    }
+
+    .admin-page-orders .admin-main {
+        padding: 12px 14px 24px;
+        gap: 12px;
+    }
+
+    .admin-orders {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    /* ---- Filter tabs: horizontal scroll ---- */
+    .admin-orders__filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 6px;
+        margin-bottom: 0;
+        padding: 5px;
+        background: var(--background-soft);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+    }
+
+    .admin-orders__filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .admin-orders__filters .admin-tabs__btn {
+        flex: 0 0 auto;
+        padding: 10px 14px;
+        white-space: nowrap;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+
+    .admin-orders__filters .admin-tabs__btn.is-active {
+        box-shadow: var(--shadow-sm);
+    }
+
+    /* ---- List panel ---- */
+    .admin-orders__panel {
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .admin-orders__panel-head {
+        margin-bottom: 10px;
+    }
+
+    .admin-orders__panel .admin-panel__title {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: var(--foreground-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .admin-orders__lead {
+        font-size: 0.8125rem;
+        line-height: 1.45;
+    }
+
+    .admin-orders__list {
+        min-width: 0;
+    }
+
+    .admin-orders__count {
+        margin: 12px 0 0;
+        font-size: 0.75rem;
+        color: var(--foreground-muted);
+        text-align: center;
+    }
+
+    .admin-orders__list .admin-empty {
+        padding: 24px 16px;
+        text-align: center;
+        background: var(--background-soft);
+        border: 1px dashed var(--border);
+        border-radius: 12px;
+    }
+
+    /* ---- Order cards ---- */
+    .admin-orders-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .admin-orders-card {
+        padding: 14px;
+        background: var(--background);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .admin-orders-card--paid {
+        border-left: 3px solid var(--primary);
+    }
+
+    .admin-orders-card--pending {
+        border-left: 3px solid #d97706;
+    }
+
+    .admin-orders-card--failed {
+        border-left: 3px solid var(--error);
+    }
+
+    .admin-orders-card--cancelled {
+        border-left: 3px solid #94a3b8;
+    }
+
+    .admin-orders-card__head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+    .admin-orders-card__identity {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .admin-orders-card__customer {
+        margin: 0;
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25;
+        color: var(--foreground);
+        word-break: break-word;
+    }
+
+    .admin-orders-card__ref {
+        margin: 4px 0 0;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--foreground-muted);
+        word-break: break-all;
+    }
+
+    .admin-orders-card__aside {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .admin-orders-card__total {
+        font-family: var(--font-heading);
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--foreground);
+        white-space: nowrap;
+    }
+
+    .admin-orders-card__tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .admin-orders-card__tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: var(--primary);
+        background: var(--primary-soft);
+        border-radius: 999px;
+    }
+
+    .admin-orders-card__tag--collection {
+        color: #0369a1;
+        background: #e0f2fe;
+    }
+
+    .admin-orders-card__meta {
+        font-size: 0.8125rem;
+        color: var(--foreground-muted);
+    }
+
+    .admin-orders-card__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .admin-orders-card__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        color: var(--primary);
+        text-decoration: none;
+        word-break: break-all;
+    }
+
+    .admin-orders-card__link:hover {
+        text-decoration: underline;
+    }
+
+    .admin-orders-card__link:focus-visible {
+        outline: none;
+        border-radius: 4px;
+        box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+    }
+
+    .admin-orders-card__foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
+    }
+
+    .admin-orders-card__date {
+        font-size: 0.75rem;
+        color: var(--foreground-muted);
+    }
+
+    .admin-orders-card__coupon {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--foreground-muted);
+    }
+
+    .admin-orders-card__coupon strong {
+        color: var(--foreground);
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1023px) and (prefers-reduced-motion: reduce) {
+    .admin-orders__filters .admin-tabs__btn {
+        transition: none;
+    }
+}
